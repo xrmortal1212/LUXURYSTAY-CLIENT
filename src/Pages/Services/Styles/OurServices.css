@@ -1,0 +1,270 @@
+/* Dark Theme Section Frame */
+.os-section {
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    background-color: #000000;
+    color: #FBFAF6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 2rem;
+    box-sizing: border-box;
+    font-family: var(--font-body, system-ui, -apple-system, sans-serif);
+}
+
+.os-container {
+    width: 100%;
+    padding: 0 2rem;
+    max-width: auto;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Header Grid */
+.os-header-grid {
+    display: flex;    
+    justify-content: space-between;
+    gap: 4rem;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 4rem;
+}
+
+.os-badge {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--text-green, #BB9459);
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.os-main-heading {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(2.5rem, 5vw, 4.8rem);
+    font-weight: 900;
+    line-height: 0.95;
+    letter-spacing: -0.035em;
+    color: #FBFAF6;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.os-desc-text {
+    font-family: var(--font-subheading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+    margin: 0;
+}
+
+/* 3 Column Grid */
+.os-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.8rem;
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+/* Service Card Container */
+.os-card {
+    overflow: hidden;
+    position: relative;
+    background-color: #0D383F;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+}
+
+.os-card-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 115%;
+    /* Aspect ratio */
+    overflow: hidden;
+}
+
+.os-card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Dark Overlay */
+.os-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0) 50%,
+            rgba(0, 0, 0, 0.75) 100%);
+    pointer-events: none;
+}
+
+/* Card Content Overlay */
+.os-card-content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1.25rem;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.os-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.os-card-title {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(1.4rem, 2.2vw, 2.2rem);
+    font-weight: 800;
+    letter-spacing: -0.01em;
+    color: #FBFAF6;
+    margin: 0;
+}
+
+.os-card-count {
+    font-family: var(--font-subheading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(0.75rem, 0.9vw, 0.85rem);
+    color: var(--text-green, #BB9459);
+    margin: 0;
+}
+
+.os-card-icon {
+    font-size: 1.1rem;
+    background-color: var(--text-green, #BB9459);
+    padding: 0.8rem;
+    color: #000000;
+    opacity: 0;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover Effects */
+.os-card:hover .os-card-img {
+    transform: scale(1.06);
+}
+
+.os-card:hover .os-card-icon {
+    opacity: 1;
+    transform: rotate(90deg);
+}
+
+/* View All CTA Button */
+.os-btn-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.os-view-all-btn {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(1.1rem, 1.4vw, 1.3rem);
+    font-weight: 700;
+    color: #FBFAF6;
+    text-decoration: underline;
+    text-underline-offset: 6px;
+    text-decoration-thickness: 2px;
+    transition: color 0.3s ease, text-underline-offset 0.3s ease, opacity 0.3s ease;
+}
+
+.os-view-all-btn:hover {
+    color: var(--text-green, #BB9459);
+    opacity: 0.85;
+    text-underline-offset: 9px;
+}
+
+/* ==========================================
+   RESPONSIVE MEDIA QUERIES
+========================================== */
+
+/* Laptop / Small Desktop (<= 1024px) */
+@media (max-width: 1024px) {
+    .os-section {
+        padding: 4rem 2rem;
+    }
+
+    .os-header-grid {
+        gap: 2.5rem;
+        margin-bottom: 3.5rem;
+    }
+}
+
+/* Tablets (<= 992px) */
+@media (max-width: 992px) {
+    .os-header-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .os-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+    }
+
+    /* Mobile / Touch Devices par icon hamesha visible rahega */
+    .os-card-icon {
+        opacity: 1;
+    }
+}
+
+/* Mobile Devices (<= 600px) */
+@media (max-width: 600px) {
+    .os-section {
+        padding: 3.5rem 1.25rem;
+    }
+
+    .os-header-grid {
+        margin-bottom: 2.5rem;
+        gap: 1rem;
+    }
+
+    .os-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .os-card-image-wrapper {
+        padding-top: 100%;
+        /* Square Aspect ratio on mobile */
+    }
+
+    .os-card-content {
+        padding: 1rem;
+    }
+}
+
+/* Extra Small Mobile Devices (<= 380px) */
+@media (max-width: 380px) {
+    .os-card-image-wrapper {
+        padding-top: 110%;
+    }
+
+    .os-card-title {
+        font-size: 1.25rem;
+    }
+}

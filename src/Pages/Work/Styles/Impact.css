@@ -1,0 +1,248 @@
+.imp-wrapper {
+    width: 100%;
+}
+
+/* --- UPPER IMPACT SECTION --- */
+.imp-section {
+    width: 100%;
+    background-color: #FBFAF6;
+    color: #0D383F;
+    padding: 7rem 5rem 6rem 5rem;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+.imp-container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+.imp-header-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
+    align-items: flex-end;
+    margin-bottom: 5rem;
+}
+
+.imp-left-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.imp-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--text-green);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+}
+
+.imp-badge-line {
+    width: 28px;
+    height: 2px;
+    background-color: var(--text-green);
+    display: inline-block;
+}
+
+.imp-heading {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(3.8rem, 6.5vw, 6rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: #0D383F;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.imp-right-col {
+    padding-bottom: 0.5rem;
+}
+
+.imp-description {
+    font-family: var(--font-subheading);
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    color: #66686d;
+    max-width: 460px;
+    margin: 0;
+    font-weight: 500;
+}
+
+/* Stats Grid & Green Hover */
+.imp-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(13,56,63, 0.12);
+}
+
+.imp-stat-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.5rem 2.5rem 2.5rem 2.5rem;
+    min-height: 200px;
+    box-sizing: border-box;
+    border-right: 1px solid rgba(13,56,63, 0.12);
+    cursor: pointer;
+    background-color: transparent;
+    transition: background-color 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.imp-stat-box:last-child {
+    border-right: none;
+}
+
+.imp-stat-number {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(3.5rem, 5.5vw, 5rem);
+    font-weight: 900;
+    color: var(--text-green);
+    line-height: 0.9;
+    margin-bottom: 2.5rem;
+    transition: color 0.3s ease;
+}
+
+.imp-stat-title {
+    font-family: var(--font-subheading, system-ui, -apple-system, sans-serif);
+
+    font-size: 0.75rem;   
+    letter-spacing: 0.14em;
+    color: #55575c;
+    margin: 0;
+    text-transform: uppercase;
+    line-height: 1.4;
+    max-width: 170px;
+    transition: color 0.3s ease;
+}
+
+.imp-stat-box:hover {
+    background-color: var(--text-green);
+}
+
+.imp-stat-box:hover .imp-stat-number,
+.imp-stat-box:hover .imp-stat-title {
+    color: #0D383F;
+}
+
+
+/* --- GREEN CTA BANNER SECTION --- */
+.imp-cta-section {
+    width: 100%;
+    background-color: var(--text-green);
+    color: #0D383F;
+    padding: 6rem 5rem;
+    box-sizing: border-box;    
+}
+
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-items: flex-end;
+}
+
+.imp-cta-heading {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(3.5rem, 6.5vw, 6.2rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: #0D383F;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.cta-line-wrap {
+    display: block;
+    overflow: hidden;
+}
+
+.cta-line {
+    display: block;
+    will-change: transform, opacity;
+}
+
+/* Black CTA Button */
+.imp-cta-btn-wrapper {
+    padding-bottom: 0.8rem;
+}
+
+.imp-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 1.2rem;
+    background-color: #0D383F;
+    color: #FBFAF6;
+    padding: 1.2rem 2.2rem;
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    text-transform: uppercase;
+    border-radius: 2px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-arrow {
+    font-size: 1.1rem;
+    transition: transform 0.3s ease;
+}
+
+.imp-cta-btn:hover {
+    background-color: #0D383F;
+    transform: translateY(-2px);
+}
+
+.imp-cta-btn:hover .cta-arrow {
+    transform: translateX(5px);
+}
+
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+
+    .imp-section,
+    .imp-cta-section {
+        padding: 4rem 2rem;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+    }
+
+    .imp-header-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .imp-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .imp-stat-box {
+        border-bottom: 1px solid rgba(13,56,63, 0.12);
+    }
+
+    .imp-stat-box:nth-child(2n) {
+        border-right: none;
+    }
+}
+
+@media (max-width: 580px) {
+    .imp-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .imp-stat-box {
+        border-right: none;
+    }
+}

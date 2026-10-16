@@ -1,0 +1,93 @@
+/* Off-White / Cream Background matching screenshot */
+.approach-section {
+    width: 100%;
+    background-color: #FBFAF6;
+    color: #222;
+    padding: 8rem 4rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 5;
+}
+
+.approach-container {    
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Header Labels */
+.approach-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+
+.approach-label,
+.approach-sublabel {
+    font-family: var(--font-subheading);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;    
+    text-transform: uppercase;
+    color: #7c7c7c;
+}
+
+/* Paragraph Container */
+.approach-body {
+    max-width: 1150px;
+}
+
+.approach-text {
+    font-family: var(--font-subheading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(2rem, 4.5vw, 4rem);     
+    
+    font-style: italic;
+    line-height: 1.12;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+/* Reveal Word Base (Unrevealed state) */
+.reveal-word {
+    display: inline-block;
+    color: #7e7e7e;
+    will-change: opacity;
+    white-space: pre-wrap;
+}
+
+/* Highlighted Green Phrase - EXACT MATCH TO IMAGE */
+.reveal-word.text-green-highlight {
+    color: var(--text-green);
+    /* Bright Neon Green */
+    font-style: italic;
+    /* ONLY Green phrase is Italicized */
+    font-weight: 900;
+    text-transform: uppercase;
+    opacity: 1 !important;
+    /* Always vivid and prominent */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .approach-section {
+        padding: 5rem 2rem;
+    }
+
+    .approach-header {
+        margin-bottom: 3rem;
+    }
+
+    .approach-label,
+    .approach-sublabel {
+        font-size: 0.62rem;
+    }
+
+    .approach-text {
+        font-size: clamp(1.8rem, 7vw, 3rem);
+        line-height: 1.2;
+    }
+}

@@ -1,0 +1,160 @@
+.receptionist-dashboard {
+  --role-accent: var(--dash-green);
+  --role-accent-soft: var(--dash-green-soft);
+}
+
+.receptionist-dashboard .dash-page-head {
+  padding: 18px 22px;
+  border: 1px solid color-mix(in srgb, var(--role-accent) 18%, var(--dash-line));
+  border-radius: 12px;
+  background: linear-gradient(115deg, var(--dash-paper) 58%, var(--role-accent-soft));
+}
+
+.receptionist-dashboard .dash-eyebrow,
+.receptionist-dashboard .dash-metric-icon {
+  color: var(--role-accent);
+}
+
+.receptionist-dashboard .dash-metric {
+  flex-basis: calc(33.333% - 10px);
+  border-left: 3px solid color-mix(in srgb, var(--role-accent) 55%, var(--dash-paper));
+}
+
+.receptionist-dashboard > .dash-grid-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+.receptionist-dashboard > .dash-grid-2 > .dash-stack {
+  display: flex;
+  width: 100%;
+  max-width: 100%;
+  min-width: 0;
+  flex: 1 1 100%;
+}
+
+.receptionist-dashboard > .dash-grid-2 > .dash-stack > .dash-panel {
+  width: 100%;
+  max-width: 100%;
+  flex: 1 1 auto;
+}
+
+.receptionist-tool-section {
+  width: 100%;
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--dash-line);
+  border-radius: 11px;
+  background: var(--dash-paper);
+  box-shadow: 0 3px 12px rgba(26, 48, 35, 0.035);
+  scroll-margin-top: 84px;
+}
+
+.receptionist-tool-section > summary {
+  display: flex;
+  min-height: 64px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 19px;
+  color: var(--dash-ink);
+  cursor: pointer;
+  list-style: none;
+}
+
+.receptionist-tool-section > summary::-webkit-details-marker {
+  display: none;
+}
+
+.receptionist-tool-section > summary::after {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  place-items: center;
+  border: 1px solid var(--dash-line);
+  border-radius: 50%;
+  color: var(--role-accent);
+  content: "+";
+  font-size: 18px;
+  line-height: 1;
+}
+
+.receptionist-tool-section[open] > summary {
+  border-bottom: 1px solid var(--dash-line);
+  background: var(--dash-surface-2);
+}
+
+.receptionist-tool-section[open] > summary::after {
+  content: "−";
+}
+
+.receptionist-tool-section > summary > span {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.receptionist-tool-section > summary strong {
+  font-size: 13px;
+}
+
+.receptionist-tool-section > summary small {
+  color: var(--dash-muted);
+  font-size: 10px;
+  line-height: 1.45;
+}
+
+.receptionist-tool-section > summary:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--role-accent) 45%, var(--dash-paper));
+  outline-offset: -3px;
+}
+
+.receptionist-tool-content {
+  padding: 14px;
+}
+
+.receptionist-tool-content > .dash-panel {
+  box-shadow: none;
+}
+
+@media (max-width: 1100px) and (min-width: 761px) {
+  .receptionist-dashboard .dash-metric {
+    flex-basis: calc(50% - 7px);
+  }
+}
+
+@media (max-width: 760px) {
+  .receptionist-dashboard .dash-metric {
+    flex-basis: calc(50% - 7px);
+    min-width: 0;
+  }
+}
+
+@media (max-width: 520px) {
+  .receptionist-dashboard .dash-page-head {
+    padding: 15px;
+  }
+
+  .receptionist-dashboard .dash-metric {
+    flex-basis: calc(50% - 4px);
+  }
+
+  .receptionist-tool-section > summary {
+    min-height: 58px;
+    padding: 11px 13px;
+  }
+
+  .receptionist-tool-content {
+    padding: 11px;
+  }
+}
+
+@media (max-width: 360px) {
+  .receptionist-dashboard .dash-metric {
+    flex-basis: 100%;
+  }
+}

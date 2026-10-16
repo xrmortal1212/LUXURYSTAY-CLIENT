@@ -1,0 +1,127 @@
+/* Container Wrapper */
+.motiv-section {
+    width: 100%;
+    min-height: 85vh;
+    background-color: #FBFAF6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8rem 0;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+    overflow: hidden; /* Scrollbars stop karne ke liye */
+}
+
+.motiv-container {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Rows with will-change for high performance rendering */
+.motiv-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    position: relative;
+    will-change: transform;
+}
+
+.row-1 {
+    justify-content: space-between;
+}
+
+.row-2 {
+    justify-content: space-between;
+    padding-left: 6%;
+}
+
+.row-3 {
+    justify-content: space-between;
+}
+
+/* Labels & FontAwesome Icons */
+.motiv-label-box {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.motiv-sublabel {
+    font-family: var(--font-body, system-ui, sans-serif);
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #7e7e7a;
+}
+
+.green-icon {
+    color: var(--text-green);
+    font-size: 0.85rem;
+}
+
+/* Typography Styling */
+.motiv-title {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(3rem, 8.5vw, 7.8rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    margin: 0;
+}
+
+.motiv-black {
+    font-weight: 900;
+    color: #111111;
+    text-transform: uppercase;
+}
+
+.motiv-green-italic {
+    font-weight: 800;
+    font-style: italic;
+    color: var(--text-green);
+}
+
+.motiv-outline {
+    font-weight: 900;
+    text-transform: uppercase;
+    color: transparent;
+    -webkit-text-stroke: 2px #111111ad;
+}
+
+.motiv-icon-spin,
+.motiv-icon-pulse {
+    display: inline-block;
+    will-change: transform;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .motiv-section {
+        padding: 4rem 0;
+    }
+
+    .motiv-container {
+        gap: 1.2rem;
+    }
+
+    .row-2 {
+        padding-left: 0;
+    }
+
+    .motiv-title {
+        font-size: clamp(2rem, 10.5vw, 4rem);
+    }
+
+    .motiv-outline {
+        -webkit-text-stroke: 1.2px #111111;
+    }
+
+    .motiv-sublabel {
+        font-size: 0.6rem;
+        letter-spacing: 0.15em;
+    }
+}

@@ -1,0 +1,146 @@
+.cs-section {
+    width: 100%;
+    background-color: #0D383F;
+    color: #FBFAF6;
+    padding: 6rem 5rem 8rem 5rem;
+    box-sizing: border-box;
+    font-family: var(--font-body);
+}
+
+.cs-container {
+    max-width: auto;
+    margin: 0 auto;
+}
+
+/* Header Grid */
+.cs-header-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    margin-bottom: 5rem;
+}
+
+.cs-badge {
+    font-size: 0.78rem;
+    font-weight: 800;
+    letter-spacing: 0.18em;
+    color: var(--text-green);
+    display: block;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.cs-main-heading {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(3rem, 5.5vw, 4.8rem);
+    font-weight: 900;
+    line-height: 0.92;
+    letter-spacing: -0.035em;
+    color: #FBFAF6;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+.cs-desc-text {
+    font-family: var(--font-subheading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(0.95rem, 1.2vw, 1.15rem);
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 500px;
+    margin: 0;
+}
+
+/* 2-Column Responsive Card Grid */
+.cs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3.5rem 2.5rem;
+}
+
+/* Individual Card Styling */
+.cs-card {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.cs-image-wrapper {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;   
+    background-color: #0D383F;
+    margin-bottom: 1.2rem;
+}
+
+.cs-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    will-change: transform;
+}
+
+.cs-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(13,56,63, 0.15);
+    transition: opacity 0.4s ease;
+}
+
+/* Hover Scale Effect */
+.cs-card:hover .cs-image {
+    transform: scale(1.05);
+}
+
+.cs-card:hover .cs-image-overlay {
+    opacity: 0;
+}
+
+/* Text Meta Below Card */
+.cs-card-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.cs-project-tag {
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+    color: var(--text-green);
+    text-transform: uppercase;
+}
+
+.cs-project-title {
+    font-family: var(--font-heading, system-ui, -apple-system, sans-serif);
+    font-size: clamp(1.8rem, 2.8vw, 2.5rem);
+    font-weight: 900;
+    color: #FBFAF6;
+    margin: 0;
+    letter-spacing: -0.02em;
+    transition: color 0.3s ease;
+}
+
+.cs-card:hover .cs-project-title {
+    color: var(--text-green);
+}
+
+/* Responsive Breakdown */
+@media (max-width: 1024px) {
+    .cs-section {
+        padding: 4rem 2rem 5rem 2rem;
+    }
+
+    .cs-header-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        margin-bottom: 3.5rem;
+    }
+
+    .cs-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+}

@@ -1,0 +1,50 @@
+/* Permission-aware tools section (staff members with extra grants) */
+
+.perm-tool-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.perm-tool-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 14px;
+  border: 1px solid var(--dash-line);
+  border-radius: 8px;
+  background: var(--dash-surface-2);
+}
+
+.perm-tool-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 auto;
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: var(--dash-green-soft);
+  color: var(--dash-green);
+}
+
+.perm-tool-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+
+.perm-tool-copy strong {
+  color: var(--dash-ink);
+  font-size: 12px;
+}
+
+.perm-tool-copy span {
+  color: var(--dash-muted);
+  font-size: 10px;
+  line-height: 1.5;
+}
